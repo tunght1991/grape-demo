@@ -30,7 +30,9 @@
     </style>
   </head>
   <body>
-    <section class="header"></section>
+    <section class="header">
+      <div id="panel-devices" class="panel-devices"></div>
+    </section>
     <section class="main-columns">
       <div id="blocks" class="col-2">
         <div id="blocks-container"></div>
@@ -115,41 +117,22 @@
         container: '#gjs',
         fromElement: true,
 
-        plugins: ['gjs-blocks-basic'],
+        plugins: ['gjs-preset-webpage'],
         blockManager: {
           appendTo: '#blocks-container'
         },
         styleManager: {
-          appendTo: '#style-manager-container',
-          sectors: [{
-            name: 'General',
-            open: false,
-            buildProps: ['float', 'display', 'position', 'top', 'right', 'left', 'bottom']
-          },{
-            name: 'Dimension',
-            open: false,
-            buildProps: [ 'width', 'height', 'max-width', 'min-height', 'margin', 'padding']
-          },{
-            name: 'Typography',
-            open: false,
-            buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align', 'text-shadow']
-          },{
-            name: 'Decorations',
-            open: false,
-            buildProps: ['border-radius-c', 'background-color', 'border-radius', 'border', 'box-shadow', 'background'],
-          },{
-            name: 'Extra',
-            open: false,
-            buildProps: ['opacity', 'transition', 'perspective', 'transform'],
-              properties: [{
-                type: 'slider',
-                property: 'opacity',
-                defaults: 1,
-                step: 0.01,
-                max: 1,
-                min:0,
-              }]
-          }],
+          appendTo: '#style-manager-container'
+        },
+        deviceManager: {
+          devices: [{
+            name: 'Desktop',
+            width: '', // default size
+          }, {
+            name: 'Mobile',
+            width: '320px', // this value will be used on canvas width
+            widthMedia: '480px', // this value will be used in CSS @media
+          }]
         },
       });
     </script>

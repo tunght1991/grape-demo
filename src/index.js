@@ -127,9 +127,9 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   commands(editor, config);
 
   // Load panels
-  // panels(editor, config);
+  panels(editor, config);
 
   // Load styles
-  // styles(editor, config);
+  styles(editor, config);
 
 });
