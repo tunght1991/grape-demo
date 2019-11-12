@@ -63,7 +63,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
     // `grapesjs-blocks-basic` plugin options
     // By setting this option to `false` will avoid loading the plugin
-    blocksBasicOpts: {},
+    blocksBasicOpts: false,
 
     // `grapesjs-navbar` plugin options
     // By setting this option to `false` will avoid loading the plugin
@@ -71,7 +71,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
     // `grapesjs-component-countdown` plugin options
     // By setting this option to `false` will avoid loading the plugin
-    countdownOpts: {},
+    countdownOpts: false,
 
     // `grapesjs-plugin-forms` plugin options
     // By setting this option to `false` will avoid loading the plugin
@@ -109,7 +109,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   } = config;
 
   // Load plugins
-  // blocksBasicOpts && pluginBlocks(editor, blocksBasicOpts);
+  blocksBasicOpts && pluginBlocks(editor, blocksBasicOpts);
   navbarOpts && pluginNavbar(editor, navbarOpts);
   countdownOpts && pluginCountdown(editor, countdownOpts);
   formsOpts && pluginForms(editor, formsOpts);
@@ -127,9 +127,9 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   commands(editor, config);
 
   // Load panels
-  // panels(editor, config);
+  panels(editor, config);
 
   // Load styles
-  // styles(editor, config);
+  styles(editor, config);
 
 });
