@@ -4,16 +4,18 @@ export default (editor, config) => {
 
   sm.getSectors().reset(csm && csm.length ? csm : [{
     name: config.textGeneral,
-    open: false,
+    open: true,
     buildProps: ['float', 'display', 'position', 'top', 'right', 'left', 'bottom'],
-  },{
-    name: config.textLayout,
-    open: false,
-    buildProps: ['width', 'height', 'max-width', 'min-height', 'margin', 'padding'],
-  },{
+  },
+  // {
+  //   name: config.textLayout,
+  //   open: true,
+  //   buildProps: ['width', 'height', 'max-width', 'min-height', 'margin', 'padding'],
+  // },
+  {
     name: config.textTypography,
-    open: false,
-    buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align', 'text-shadow'],
+    open: true,
+    buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align'],
     properties: [{
       property: 'text-align',
       list: [
@@ -23,13 +25,16 @@ export default (editor, config) => {
           { value: 'justify', className: 'fa fa-align-justify' },
       ],
     }]
-  },{
-    name: config.textDecorations,
-    open: false,
-    buildProps: ['border-radius-c', 'background-color', 'border-radius', 'border', 'box-shadow', 'background'],
-  },{
-    name: config.textExtra,
-    open: false,
-    buildProps: ['transition', 'perspective', 'transform'],
-  }]);
+  },
+  // {
+  //   name: config.textDecorations,
+  //   open: true,
+  //   buildProps: ['border-radius-c', 'background-color', 'border-radius', 'border', 'box-shadow', 'background'],
+  // },
+  // {
+  //   name: config.textExtra,
+  //   open: true,
+  //   buildProps: ['transition', 'perspective', 'transform'],
+  // }
+  ]);
 }

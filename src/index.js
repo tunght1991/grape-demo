@@ -18,7 +18,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
   let defaults = {
     // Which blocks to add
-    blocks: ['link-block', 'text-basic'],
+    blocks: ['link-block', 'quote', 'text-basic'],
 
     // Modal import title
     modalImportTitle: 'Import',
@@ -44,16 +44,16 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     showStylesOnChange: 1,
 
     // Text for General sector in Style Manager
-    textGeneral: 'General',
+    textGeneral: 'Chung',
 
     // Text for Layout sector in Style Manager
-    textLayout: 'Layout',
+    textLayout: 'Bố cục',
 
     // Text for Typography sector in Style Manager
-    textTypography: 'Typography',
+    textTypography: 'Text',
 
     // Text for Decorations sector in Style Manager
-    textDecorations: 'Decorations',
+    textDecorations: 'Trang trí',
 
     // Text for Extra sector in Style Manager
     textExtra: 'Extra',
@@ -71,7 +71,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
     // `grapesjs-component-countdown` plugin options
     // By setting this option to `false` will avoid loading the plugin
-    countdownOpts: false,
+    countdownOpts: {},
 
     // `grapesjs-plugin-forms` plugin options
     // By setting this option to `false` will avoid loading the plugin
